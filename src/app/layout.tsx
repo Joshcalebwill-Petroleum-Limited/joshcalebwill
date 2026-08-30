@@ -136,13 +136,17 @@ export default function RootLayout({
             __html: JSON.stringify(organizationJsonLd),
           }}
         />
+
         <LenisProvider>
           <Header />
+
           <main className="flex-1">{children}</main>
+
           <Footer />
-          <ChatWidget />
-          <CookieConsent />
         </LenisProvider>
+
+        <ChatWidget />
+        <CookieConsent />
       </body>
     </html>
   );
