@@ -21,7 +21,7 @@ export default function HomePage() {
       <WhatWeDo />
 
       {/* Impact / stats proof strip */}
-      {/* <ImpactStats /> */}
+      <ImpactStats />
 
       {/* Mid-page parallax band */}
       {/* <section className="relative overflow-hidden py-28 lg:py-36">
