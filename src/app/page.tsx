@@ -24,7 +24,7 @@ export default function HomePage() {
       <ImpactStats />
 
       {/* Mid-page parallax band */}
-      {/* <section className="relative overflow-hidden py-28 lg:py-36">
+      <section className="relative overflow-hidden py-28 lg:py-36">
         <div className="absolute inset-0 bg-gradient-to-br from-background-soft via-background-warm to-background" />
         <motion.div
           className="pointer-events-none absolute -left-32 top-0 h-[420px] w-[420px] rounded-full bg-orange/25 blur-3xl"
@@ -71,7 +71,7 @@ export default function HomePage() {
             </p>
           </RevealOnScroll>
         </div>
-      </section> */}
+      </section>
 
       {/* CTA band */}
       {/* <section className="relative overflow-hidden bg-gradient-to-r from-orange via-red to-yellow">
