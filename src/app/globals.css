@@ -1,26 +1,108 @@
 @import "tailwindcss";
+@import "lenis/dist/lenis.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Logo-inspired palette - NO BLACK */
+  --color-orange: #f97316;
+  --color-red: #ef4444;
+  --color-blue: #3b82f6;
+  --color-lime: #84cc16;
+  --color-yellow: #eab308;
+  --color-teal: #14b8a6;
+  --color-gold: #d4a017;
+  --color-cyan: #06b6d4;
+
+  /* Backgrounds - bright & clean */
+  --background: #fafafa;
+  --background-elevated: #ffffff;
+  --background-soft: #f0f9ff;
+  --background-warm: #fff7ed;
+
+  /* Text - deep but never pure black */
+  --foreground: #1e3a5f;
+  --foreground-muted: #3b5a7a;
+  --foreground-subtle: #64748b;
+
+  /* Borders & accents */
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-elevated: var(--background-elevated);
+  --color-background-soft: var(--background-soft);
+  --color-background-warm: var(--background-warm);
+
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-foreground-subtle: var(--foreground-subtle);
+
+  --color-orange: var(--color-orange);
+  --color-red: var(--color-red);
+  --color-blue: var(--color-blue);
+  --color-lime: var(--color-lime);
+  --color-yellow: var(--color-yellow);
+  --color-teal: var(--color-teal);
+  --color-gold: var(--color-gold);
+  --color-cyan: var(--color-cyan);
+
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-manrope);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Force light theme - no dark mode with black */
+html {
+  color-scheme: light only;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:  var(--font-inter), system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-manrope);
+  margin: 0;
+}
+
+
+/* Selection color from logo palette */
+::selection {
+  background-color: color-mix(in srgb, var(--color-orange) 30%, transparent);
+  color: var(--foreground);
+}
+
+/* Custom scrollbar - bright */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-soft);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-blue);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-orange);
 }
