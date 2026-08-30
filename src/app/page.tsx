@@ -15,10 +15,10 @@ export default function HomePage() {
       <HeroSlider />
 
       {/* Chevron-style sticky values story */}
-      <ValuesScroll />
+      {/* <ValuesScroll /> */}
 
       {/* What We Do – service grid */}
-      {/* <WhatWeDo /> */}
+      <WhatWeDo />
 
       {/* Impact / stats proof strip */}
       {/* <ImpactStats /> */}
