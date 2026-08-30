@@ -74,7 +74,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA band */}
-      {/* <section className="relative overflow-hidden bg-gradient-to-r from-orange via-red to-yellow">
+      <section className="relative overflow-hidden bg-gradient-to-r from-orange via-red to-yellow">
         <motion.div
           className="pointer-events-none absolute inset-0 opacity-30"
           initial={{ backgroundPosition: "0% 50%" }}
@@ -112,7 +112,7 @@ export default function HomePage() {
             </Link>
           </RevealOnScroll>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }
